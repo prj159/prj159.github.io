@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>使用git | 狗狗爱卷卷</title><meta name="author" content="狗狗爱卷卷"><meta name="copyright" content="狗狗爱卷卷"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="笔者遇到了一些较为不可思议之事。有人在做项目之时，每做完一份就会把那个版本的文件传到QQ的群文件中，美名其曰保留记录。笔者OS：？？？ 事实上，这个行为其实就是简化版的git，但是就是有人不会git。这里笔者只好说，懂git的人可以退出，不懂git的客官请继续看。 下载并安装git下载是到网站..."><script type="application/ld+json">{
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数学建模——层次分析法 | 狗狗爱卷卷</title><meta name="author" content="狗狗爱卷卷"><meta name="copyright" content="狗狗爱卷卷"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="层次分析法的作用 将主观判断与客观数据结合，对多因素、多目标的复杂问题进行结构化分解。既可以避免决策依赖直觉，提升逻辑性和透明度，又可以避免决策依赖直觉，提升逻辑性和透明度。  层次分析法的步骤：  提出评价类问题； 在论文中画出层级结构图； 构造判断矩阵； 依照评价指标对各个方案打分； 求出..."><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "使用git",
+  "headline": "数学建模——层次分析法",
   "url": "https://prj159.github.io/posts/undefined.html",
   "image": "https://prj159.github.io/img/avatar.jpeg",
-  "datePublished": "2026-03-05T15:30:49.000Z",
-  "dateModified": "2026-03-05T16:02:24.000Z",
+  "datePublished": "2026-03-10T06:51:40.000Z",
+  "dateModified": "2026-03-10T08:00:33.339Z",
   "author": [
     {
       "@type": "Person",
@@ -142,7 +142,7 @@
   },
   autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '使用git',
+  title: '数学建模——层次分析法',
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
@@ -174,80 +174,416 @@
     transform: translateX(-50%) translateY(0);
   }
 </style>
-<meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-color: #F0F0F0;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-link"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">狗狗爱卷卷</span></a><a class="nav-page-title" href="/"><span class="site-name">使用git</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-link"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">使用git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-05T15:30:49.000Z" title="发表于 2026-03-05 23:30:49">2026-03-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-05T16:02:24.000Z" title="更新于 2026-03-06 00:02:24">2026-03-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>笔者遇到了一些较为不可思议之事。有人在做项目之时，每做完一份就会把那个版本的文件传到QQ的群文件中，美名其曰保留记录。笔者OS：？？？</p>
-<p>事实上，这个行为其实就是简化版的git，但是就是有人不会git。这里笔者只好说，懂git的人可以退出，不懂git的客官请继续看。</p>
-<h1 id="下载并安装git"><a href="#下载并安装git" class="headerlink" title="下载并安装git"></a>下载并安装git</h1><p>下载是到网站(<a href="">https://git-scm.com/install/windows</a>)中下载安装包。里面涵盖了Windows、Mac、Linux三大操作系统的安装程序，点进去看就可以看到安装包下载或者教你如何命令行下载。跟着做就可以成功下载并安装git。</p>
-<p>如果你想看有没有装好，直接将这个代码敲进你的终端中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<p>如果可以弹出版本号就是下载完成，如果没有弹出那可能需要在知乎、CSDN等网站找解决方法了。</p>
-<p>随后需要配置你的git。注意！你的名字一定要用英文！！！你的邮箱最好用你注册GitHub或者Gitee的邮箱账号。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的名字&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="使用git"><a href="#使用git" class="headerlink" title="使用git"></a>使用git</h1><p>如今的大多数人看到命令行就发愁，这里推荐使用GitHub desktop的软件，这个是图形化软件，可以一目了然地学会如何操作git。</p>
-<p>首先肯定是要找到GitHub desktop这个软件，安装包在网站(<a href="">https://desktop.github.com/download/</a>)中下载即可。</p>
-<p>使用该软件之前需要使用GitHub账号登陆。接下来的操作笔者会用Mac OS来展示，Windows用户一样是可以跟着操作的。一般Mac OS的菜单栏都是在屏幕的左上角，Windows即是对应软件窗口的左上角。</p>
-<h3 id="个人工作流"><a href="#个人工作流" class="headerlink" title="个人工作流"></a>个人工作流</h3><p>我们先以个人工作流为例。为了可以获取文件数据，第一步一定是要点击左上角的File，随后会弹出三个选项，分别是：</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2008.41.49.png" alt="File的位置"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2008.45.54.png" alt="点击File"></p>
-<blockquote>
-<p>New repository（新建仓库，当你的GitHub和本地电脑中都没有该项目的时候点击，这样会在你的GitHub和本地电脑都生成项目）</p>
-<p>add local repository（添加本地仓库，当你的GitHub中没有该项目，但是本地电脑有该项目的时候点击，这样会把本地电脑的项目上传到GitHub中）</p>
-<p>clone repository（克隆仓库，当本地电脑没有项目，但GitHub中有项目的时候点击，这样会把GitHub的项目下载到你的电脑中）</p>
-</blockquote>
-<p>假设我们在GitHub和本地电脑中都没有项目，我们点击New repository。随后会出现该界面</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2009.02.22.png" alt="新建 New repository"></p>
-<blockquote>
-<p>Name（你的仓库名字）</p>
-<p>Description（对你仓库的描述）</p>
-<p>Local path（把该项目存在你的电脑的哪个地方）</p>
-<p>Initialize this repository with a README（默认会生成一个README.md文件，这个文件一般是开发者写给使用者的内容，相当于说明书）</p>
-<p>Git ignore（忽略上传哪类文件）</p>
-<p>License（许可）</p>
-</blockquote>
-<p>后面两个空取默认就行。</p>
-<p>就先随便写一个吧，比如我想要搞一个会打印hello world的python代码。我的内容填写如下。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2009.17.35.png" alt="新建仓库"></p>
-<p>然后就可以用Visual Studio Code打开这个文件夹。在该文件夹里面创建main.py并在文件写上print(“hello world”)，这样你的GitHub desktop会出现changes。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2009.02.22.png" alt="出现changes"></p>
-<p>之后就可以在窗口左下角写上标题和description，这个标题指的是你当前改动行为的标题，内容也是同理，填写完后我们就可以提交了。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2009.28.18.png" alt="填写提交"></p>
-<p>提交要点击commit ? files to main，这样做是将你的修改提交至暂存区，随后还要点击pubilish repository，这样我们的项目才可以同步到GitHub。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2009.30.20.png" alt="同步到GitHub"></p>
-<p>你可以在GitHub中查看你刚刚建的仓库。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2010.20.27.png" alt="查看仓库"></p>
-<p>如果你对你的项目有改动，你可以重复上面的动作来进行修改。</p>
-<p>当然，GitHub最好的功能就是可以时刻恢复你代码的版本，比如笔者在刚刚的项目中把”hello world”改为”hi world”并上传到GitHub，然后又后悔对这个功能进行改动，我们就可以进行版本恢复。点击history，然后在改动的那个commit右键，选择revert changes in commit，最后再push一下。这样你在这里的功能改动就恢复了。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2011.00.18.png" alt="版本恢复"></p>
-<p>值得注意的是，这个恢复并不是对整个文件的恢复，而是对你改的某几行代码的恢复。</p>
-<h3 id="团队工作流"><a href="#团队工作流" class="headerlink" title="团队工作流"></a>团队工作流</h3><p>接下来是团队合作工作流。团队合作工作流必然会比个人工作流要复杂一些。</p>
-<p>如果你是参与者，你可以让主持人invite你随后就可以clone你们团队的项目到你的电脑上。此时克隆需要在GitHub desktop点击File，随后点击clone repository，就会出现这个界面。在该界面中选择你想要克隆的仓库，然后更改你想要存放的位置，这样就成功地将团队的项目给存到你的电脑中了。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2010.30.52.png" alt="克隆仓库"></p>
-<p>团队工作流经常需要用到的是分支branch和代码冲突。</p>
-<p>分支branch是为了给代码加入新功能，但是害怕加新功能之后会改崩最后挂掉的这种情况做准备。我们还是用之前的hello仓库试试水，要新建一个branch，首先要点击current branch，随后点击new branch，给这个新的分支命名，笔者将该分支的命名为test，确认后，现在我们就处在test分支里，如果想要回去main分支，就还是点击current branch再点击main，这样就回到main分支中。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2011.18.13.png" alt="新建分支"></p>
-<p>我们在test分支里面将main.py改成图中这样，随后上传，这样就完成了分支的新建和上传。在GitHub中也可以看见你新建的分支。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2011.31.59.png" alt="查看分支"></p>
-<p>新功能肯定是要合并到主分支的，在你认为代码测试得差不多时，就可以合并到main分支了。首先将你的current branch调到main，随后要点一下current branch，再点击choose a branch to merge into main，选择你想将哪个分支合并到主分支，笔者这里选择test，最后点击create a merge commit。这样就成功地把test分支的内容合并到主分支。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2011.46.11.png" alt="合并分支"></p>
-<p>上图笔者截错了，大家看到操作和图片展示不一样不要慌张</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2011.49.47.png" alt="合并分支"></p>
-<p>代码冲突出现在你和你的同事在同时改同样的一份文件，然后你的同事先提交了他的代码，随后你也想要提交你的代码，因为他改的部分代码和你改的部分代码因为git没有这么高级导致无法合并，这样GitHub desktop就会报错，说有冲突，这样就需要人去解决这部分的冲突。</p>
-<p>笔者这里模拟一下这个冲突，笔者还是在hello仓库里在main分支里新建一个test.txt文件，在里面写着“这是基础版本”。随后在main分支分出一个新的分支test2，将test2分支的test.txt文件的“这是基础版本”改为“这是test2的版本”。再去main分支的test.txt文件的“这是基础版本”改为“这是main的版本”。把test2分支合并到main分支，这样GitHub desktop就会说有冲突。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2012.18.04.png" alt="冲突"></p>
-<p>我们点击open in Visual Studio Code，然后就在VSC中看到因为哪些地方发生了冲突，为了方便观察，我们可以选择比较更改，这样界面就会变成两个分支有改动的文本和原本没有改动的文本。此时笔者选择“这是main的版本”的更改，再点击完成合并，这样冲突就可以解除了。最后再回到GitHub desktop就可以将你的代码上传到GitHub了。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2012.19.02.png" alt="冲突解决"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2012.19.46.png" alt="冲突解决"></p>
-<p>此时笔者选择“这是main的版本”的更改，再点击完成合并，这样冲突就可以解除了。最后再回到GitHub desktop就可以将你的代码上传到GitHub了。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2012.20.01.png" alt="冲突解决"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2012.20.15.png" alt="冲突解决"></p>
-<p>需要注意的是，在团队合作中要经常地点击Fetch origin，以免落掉同事修改的代码。</p>
-<hr>
-<p>最后如果想要在GitHub删除hello这个仓库，可以在GitHub网站找到你的hello这个仓库点进去，随后在上方的菜单栏中找到settings，划到最下面，点击delete this repository，跟着系统提示操作，就可以把这个仓库在GitHub中删了。本地的直接移到垃圾桶就删了。</p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/%E6%88%AA%E5%B1%8F2026-02-08%2012.30.09.png" alt="删除仓库"></p>
-<hr>
-<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://prj159.github.io">狗狗爱卷卷</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://prj159.github.io/posts/undefined.html">https://prj159.github.io/posts/undefined.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://prj159.github.io" target="_blank">狗狗爱卷卷</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/avatar.jpeg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">狗狗爱卷卷</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/prj159" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:panrj159@qq.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="javascript:void(0);" target="_blank" title="公众号二维码"><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85git"><span class="toc-number">1.</span> <span class="toc-text">下载并安装git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8git"><span class="toc-number">2.</span> <span class="toc-text">使用git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">2.1.</span> <span class="toc-text">个人工作流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%A2%E9%98%9F%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">2.2.</span> <span class="toc-text">团队工作流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#END"><span class="toc-number">2.3.</span> <span class="toc-text">END</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2024 - 2026 By 狗狗爱卷卷</span></div><div class="footer_custom_text">Copyright © 2024 Waky. All Rights Reserved.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
+<meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-color: #F0F0F0;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-link"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">狗狗爱卷卷</span></a><a class="nav-page-title" href="/"><span class="site-name">数学建模——层次分析法</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-link"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">数学建模——层次分析法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-10T06:51:40.000Z" title="发表于 2026-03-10 14:51:40">2026-03-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-10T08:00:33.339Z" title="更新于 2026-03-10 16:00:33">2026-03-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h3 id="层次分析法的作用">层次分析法的作用</h3>
+<p>将主观判断与客观数据结合，对多因素、多目标的复杂问题进行结构化分解。既可以避免决策依赖直觉，提升逻辑性和透明度，又可以避免决策依赖直觉，提升逻辑性和透明度。</p>
+<hr />
+<h3 id="层次分析法的步骤">层次分析法的步骤：</h3>
+<ol type="1">
+<li><p>提出评价类问题；</p></li>
+<li><p>在论文中画出层级结构图；</p></li>
+<li><p>构造判断矩阵；</p></li>
+<li><p>依照评价指标对各个方案打分；</p></li>
+<li><p>求出权重，填表，求得最后打分；</p></li>
+<li><p>层次总排序一致性检验。</p></li>
+</ol>
+<p>下面我们会以这样的步骤解决一个小问题。</p>
+<hr />
+<h3 id="例题">【例题】</h3>
+<p>小明想买一件衣服，但是有太多的品牌选择了，有阿迪达斯、耐克和安踏。为了可以选出自己满意的品牌，小明制定了他的判断标准，有衣服新颖度、衣服价格、衣服评价、商家态度。</p>
+<hr />
+<h4 id="提出评价类问题">1. 提出评价类问题</h4>
+<p>即上文例题。</p>
+<hr />
+<h4 id="在论文中画出层级结构图">2. 在论文中画出层级结构图</h4>
+<p>层级结构图内有包含目标层、准则层、方案层。我们以这道题为例，目标层就是选择品牌，准则层是衣服新颖度、衣服价格、衣服评价、商家态度，方案层是阿迪达斯、耐克和安踏。结构图如图1所示。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0002/p1.png" alt="层级结构图" />
+<figcaption aria-hidden="true">层级结构图</figcaption>
+</figure>
+<center>
+图1
+</center>
+<hr />
+<h4 id="构造判断矩阵">3. 构造判断矩阵</h4>
+<p>构造判断矩阵使用“两两比较法”，比如把衣服新颖度和衣服价格放来比较看怎么打分。打分标准如下表1。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">因素比因素</th>
+<th style="text-align: center;">量化值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">同等重要</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">稍微重要</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">较强重要</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">强烈重要</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">极端重要</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">两相邻判断的中间值</td>
+<td style="text-align: center;">2,4,6,8</td>
+</tr>
+</tbody>
+</table>
+<center>
+表1
+</center>
+<p>常用的是专家打分和查阅文献打分。这道题只是一个让大家学习的例题，就没有什么专家了。假设衣服价格相对于新颖度来说是较强重要的，所以我打5分，所以新颖度对衣服价格是1/5分，剩下的也是一样操作。判断矩阵如下表2。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">指标判断</th>
+<th style="text-align: center;">衣服新颖度</th>
+<th style="text-align: center;">衣服价格</th>
+<th style="text-align: center;">衣服评价</th>
+<th style="text-align: center;">商家态度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">衣服新颖度</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/5</td>
+<td style="text-align: center;">1/3</td>
+<td style="text-align: center;">1/3</td>
+</tr>
+<tr>
+<td style="text-align: center;">衣服价格</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/5</td>
+<td style="text-align: center;">1/3</td>
+</tr>
+<tr>
+<td style="text-align: center;">衣服评价</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/5</td>
+</tr>
+<tr>
+<td style="text-align: center;">商家态度</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<center>
+表2
+</center>
+<hr />
+<h4 id="依照评价指标对各个方案打分">4. 依照评价指标对各个方案打分</h4>
+<p>判断标准同上，但是要注意的是，我们这次要列四个矩阵，分别是阿迪达斯、耐克和安踏在衣服新颖度、衣服价格、衣服评价、商家态度方面的对比打分。这里只示范其中一个矩阵，衣服新颖度矩阵如下表3。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">衣服新颖度</th>
+<th style="text-align: center;">阿迪达斯</th>
+<th style="text-align: center;">耐克</th>
+<th style="text-align: center;">安踏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">阿迪达斯</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">耐克</td>
+<td style="text-align: center;">1/5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">安踏</td>
+<td style="text-align: center;">1/7</td>
+<td style="text-align: center;">1/3</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<center>
+表3
+</center>
+<hr />
+<h4 id="求出权重填表求得最后打分">5. 求出权重，填表，求得最后打分</h4>
+<p>在此之前，我们还要对每个矩阵进行一致性检验，一致性检验是因为我们对每个指标进行评价打分，当指标多的时候，可能存在相互矛盾的地方，我们要将这种矛盾控制在一个合理的范围之内。</p>
+<h5 id="一致性的判断方法">一致性的判断方法：</h5>
+<ol type="1">
+<li>正互反矩阵A的秩1，A的唯一非零特征根为n；</li>
+<li>正互反矩阵A的任一列向量都是对于特征根λ的特征向量；</li>
+<li>当正互反矩阵A不为一致阵时，其最大特征根λ_max&gt;n，与n相差越大，其不一致程度越大。</li>
+</ol>
+<p>定义一致性指标：</p>
+<p><span class="math display">$$
+CI = \frac{\lambda_{max} - n}{n - 1}
+$$</span></p>
+<p>CI=0，有完全的一致性；CI接近于0，有满意的一致性；CI越大，不一致越严重。</p>
+<p>为衡量CI的大小，引入随机一致性指标RI：</p>
+<p><span class="math display">$$
+RI = \frac{CI_1 + CI_2 + \dots + CI_i}{i} = \frac{\lambda_1 + \lambda_2
++ \dots + \lambda_i - n}{n - 1}
+$$</span></p>
+<p>其中，n表示矩阵阶数，i表示判断矩阵个数。随机一致性指标RI和判断矩阵的阶数有关。对应关系如表4。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">矩阵阶数</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">9</th>
+<th style="text-align: center;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">RI</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.58</td>
+<td style="text-align: center;">0.90</td>
+<td style="text-align: center;">1.12</td>
+<td style="text-align: center;">1.24</td>
+<td style="text-align: center;">1.32</td>
+<td style="text-align: center;">1.41</td>
+<td style="text-align: center;">1.45</td>
+<td style="text-align: center;">1.49</td>
+</tr>
+</tbody>
+</table>
+<center>
+表4
+</center>
+<p>在检验判断矩阵是否具有满意的一致性时，还需将CI和随机一致性指标RI进行比较，得出检验系数CR。</p>
+<p><span class="math display">$$
+CR = \frac{CI}{RI}
+$$</span></p>
+<p>一般，如果CR&lt;0.1，则认为该判断矩阵通过一致性检验，否则就不具有一致性。</p>
+<p>对于一致性矩阵和非一致性矩阵我们有不同的求权重的方法。我们先说有一致性的矩阵。</p>
+<h5 id="一致性矩阵如表5直接归一化的值作为权重">(1)
+一致性矩阵（如表5）——直接归一化的值作为权重</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">衣服价格</th>
+<th style="text-align: center;">阿迪达斯</th>
+<th style="text-align: center;">耐克</th>
+<th style="text-align: center;">安踏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">阿迪达斯</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">耐克</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">安踏</td>
+<td style="text-align: center;">1/4</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<center>
+表5
+</center>
+<p>直接归一化：</p>
+<p><span class="math display">$$
+\text{阿迪达斯} = \frac{1}{1 + 0.5 + 0.25}
+$$</span></p>
+<p><span class="math display">$$
+\text{耐克} = \frac{0.5}{1 + 0.5 + 0.25}
+$$</span></p>
+<p><span class="math display">$$
+\text{安踏} = \frac{0.25}{1 + 0.5 + 0.25}
+$$</span></p>
+<h5 id="非一致性矩阵如表6算术平均法">(2)
+非一致性矩阵（如表6）——算术平均法</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">服务态度</th>
+<th style="text-align: center;">阿迪达斯</th>
+<th style="text-align: center;">耐克</th>
+<th style="text-align: center;">安踏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">阿迪达斯</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">耐克</td>
+<td style="text-align: center;">1/4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">安踏</td>
+<td style="text-align: center;">1/7</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<center>
+表6
+</center>
+<p>第一列：阿迪达斯=0.7179，耐克=0.1795，安踏=0.1026；
+第二列：阿迪达斯=0.7272，耐克=0.1818，安踏=0.0909；
+阿迪达斯=0.7，耐克=0.2，安踏=0.1。</p>
+<p>则可以得到算术平均数：阿迪达斯=0.7150，耐克=0.1871，安踏=0.0978。</p>
+<p>这样确实可以直接算出来，但是不一致矩阵的权重结果需谨慎使用，建议在数学建模论文中注明CR值并分析可能存在的决策偏差。最好还是人为修正。</p>
+<h5 id="特征值法求权重如表7important">(3)
+特征值法求权重（如表7）——important</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">衣服评价</th>
+<th style="text-align: center;">阿迪达斯</th>
+<th style="text-align: center;">耐克</th>
+<th style="text-align: center;">安踏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">阿迪达斯</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">耐克</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">安踏</td>
+<td style="text-align: center;">1/5</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<center>
+表7
+</center>
+<p>这里就必须要用到线性代数的知识了，相关知识点可以点击查看大学知识——线性代数。这个只能用于一致性矩阵，所以一开始要进行一致性检验，随后，就取最大特征值对应的特征向量，最后对这个特征向量归一化。</p>
+<hr />
+<h4
+id="代码部分千万不要直接使用如果多人用会直接判定为抄袭">代码部分（千万不要直接使用，如果多人用会直接判定为抄袭！）</h4>
+<h5 id="判断一致性">(1) 判断一致性：</h5>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断矩阵</span></span><br><span class="line">judgment_matrix = np.array([</span><br><span class="line">    [<span class="number">1</span>, <span class="number">1</span>/<span class="number">5</span>, <span class="number">1</span>/<span class="number">3</span>, <span class="number">1</span>/<span class="number">5</span>],</span><br><span class="line">    [<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">    [<span class="number">3</span>, <span class="number">1</span>/<span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>/<span class="number">3</span>],</span><br><span class="line">    [<span class="number">5</span>, <span class="number">1</span>/<span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">normalized_matrix = judgment_matrix / judgment_matrix.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br><span class="line">weights = normalized_matrix.mean(axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">lambda_max = np.linalg.eigvals(judgment_matrix).<span class="built_in">max</span>().real</span><br><span class="line">CI = (lambda_max - <span class="built_in">len</span>(weights)) / (<span class="built_in">len</span>(weights) - <span class="number">1</span>)</span><br><span class="line">RI = <span class="number">0.89</span>  <span class="comment"># 这里根据大家的n值，找出表格中对应的系数，修改为大家所需要的值即可</span></span><br><span class="line">CR = CI / RI</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> CR &lt; <span class="number">0.1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;判断矩阵的一致性通过&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;判断矩阵的一致性不通过&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="求一致性矩阵的权重">(2) 求一致性矩阵的权重：</h5>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义判断矩阵</span></span><br><span class="line">judgment_matrix = np.array([</span><br><span class="line">    [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>/<span class="number">2</span>, <span class="number">2</span>],</span><br><span class="line">    [<span class="number">1</span>/<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>/<span class="number">2</span>, <span class="number">1</span>],</span><br><span class="line">    [<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    [<span class="number">1</span>/<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>/<span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">rw_products = np.prod(judgment_matrix, axis=<span class="number">1</span>)</span><br><span class="line">root_products = np.power(rw_products, <span class="number">1</span>/np.shape(judgment_matrix)[<span class="number">0</span>])</span><br><span class="line">weights = root_products / np.<span class="built_in">sum</span>(root_products)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> brand, weight <span class="keyword">in</span> <span class="built_in">zip</span>([<span class="string">&quot;阿迪达斯&quot;</span>, <span class="string">&quot;耐克&quot;</span>, <span class="string">&quot;安踏&quot;</span>], weights):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;brand&#125;</span> 的权重为: <span class="subst">&#123;weight:<span class="number">.3</span>f&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="最后打分">最后打分</h4>
+<p>如下表8。（注：最后结果并不表达作者对哪个品牌的喜爱或者对哪个品牌的认可，这里的数据都是编造的！）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">阿迪达斯</th>
+<th style="text-align: center;">耐克</th>
+<th style="text-align: center;">安踏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">衣服新颖度</td>
+<td style="text-align: center;">0.06</td>
+<td style="text-align: center;">0.773</td>
+<td style="text-align: center;">0.193</td>
+<td style="text-align: center;">0.083</td>
+</tr>
+<tr>
+<td style="text-align: center;">衣服价格</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.5714</td>
+<td style="text-align: center;">0.2857</td>
+<td style="text-align: center;">0.1429</td>
+</tr>
+<tr>
+<td style="text-align: center;">衣服评价</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">0.595</td>
+<td style="text-align: center;">0.276</td>
+<td style="text-align: center;">0.128</td>
+</tr>
+<tr>
+<td style="text-align: center;">商家态度</td>
+<td style="text-align: center;">0.52</td>
+<td style="text-align: center;">0.715</td>
+<td style="text-align: center;">0.187</td>
+<td style="text-align: center;">0.098</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>最终得分</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>0.66</strong></td>
+<td style="text-align: center;"><strong>0.23</strong></td>
+<td style="text-align: center;"><strong>0.11</strong></td>
+</tr>
+</tbody>
+</table>
+<center>
+表8
+</center>
+<hr />
+<h4 id="层次总排序一致性检验">6. 层次总排序一致性检验</h4>
+<p>满足</p>
+<p><span class="math display">$$
+CR = \frac{a_1CR_1 + a_2CR_2 + \dots + a_iCR_i}{a_1RI_1 + a_2RI_2 +
+\dots + a_iRI_i} &lt; 0.1
+$$</span></p>
+<p>即可通过一致性检验。其中，i表示衣服新颖度、衣服价格、衣服评价、商家态度这四个矩阵的编号。</p>
+<hr />
+<h3 id="参考">参考</h3>
+<p>[1] 叶其孝 姜启源《大学知识——数学建模》 [2] 百度百科《层次分析法》
+[3] CSDN《评价决策之层次分析法》</p>
+<p>注：有部分内容用AI生成。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://prj159.github.io">狗狗爱卷卷</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://prj159.github.io/posts/undefined.html">https://prj159.github.io/posts/undefined.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://prj159.github.io" target="_blank">狗狗爱卷卷</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/avatar.jpeg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/undefined.html" title="使用git"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">使用git</div></div><div class="info-2"><div class="info-item-1">笔者遇到了一些较为不可思议之事。有人在做项目之时，每做完一份就会把那个版本的文件传到QQ的群文件中，美名其曰保留记录。笔者OS：？？？ 事实上，这个行为其实就是简化版的git，但是就是有人不会git。这里笔者只好说，懂git的人可以退出，不懂git的客官请继续看。 下载并安装git 下载是到网站(https://git-scm.com/install/windows)中下载安装包。里面涵盖了Windows、Mac、Linux三大操作系统的安装程序，点进去看就可以看到安装包下载或者教你如何命令行下载。跟着做就可以成功下载并安装git。 如果你想看有没有装好，直接将这个代码敲进你的终端中。 1git --version 如果可以弹出版本号就是下载完成，如果没有弹出那可能需要在知乎、CSDN等网站找解决方法了。 随后需要配置你的git。注意！你的名字一定要用英文！！！你的邮箱最好用你注册GitHub或者Gitee的邮箱账号。 12git config --global user.name &quot;你的名字&quot;git config --global user.email &q...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">狗狗爱卷卷</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/prj159" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:panrj159@qq.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="javascript:void(0);" target="_blank" title="公众号二维码"><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">层次分析法的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text">层次分析法的步骤：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">【例题】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E5%87%BA%E8%AF%84%E4%BB%B7%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">1. 提出评价类问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E7%94%BB%E5%87%BA%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="toc-number">3.2.</span> <span class="toc-text">2. 在论文中画出层级结构图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%88%A4%E6%96%AD%E7%9F%A9%E9%98%B5"><span class="toc-number">3.3.</span> <span class="toc-text">3. 构造判断矩阵</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E7%85%A7%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87%E5%AF%B9%E5%90%84%E4%B8%AA%E6%96%B9%E6%A1%88%E6%89%93%E5%88%86"><span class="toc-number">3.4.</span> <span class="toc-text">4. 依照评价指标对各个方案打分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B1%82%E5%87%BA%E6%9D%83%E9%87%8D%E5%A1%AB%E8%A1%A8%E6%B1%82%E5%BE%97%E6%9C%80%E5%90%8E%E6%89%93%E5%88%86"><span class="toc-number">3.5.</span> <span class="toc-text">5. 求出权重，填表，求得最后打分</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7%E7%9A%84%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95"><span class="toc-number">3.5.1.</span> <span class="toc-text">一致性的判断方法：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7%E7%9F%A9%E9%98%B5%E5%A6%82%E8%A1%A85%E7%9B%B4%E6%8E%A5%E5%BD%92%E4%B8%80%E5%8C%96%E7%9A%84%E5%80%BC%E4%BD%9C%E4%B8%BA%E6%9D%83%E9%87%8D"><span class="toc-number">3.5.2.</span> <span class="toc-text">(1)
+一致性矩阵（如表5）——直接归一化的值作为权重</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%9E%E4%B8%80%E8%87%B4%E6%80%A7%E7%9F%A9%E9%98%B5%E5%A6%82%E8%A1%A86%E7%AE%97%E6%9C%AF%E5%B9%B3%E5%9D%87%E6%B3%95"><span class="toc-number">3.5.3.</span> <span class="toc-text">(2)
+非一致性矩阵（如表6）——算术平均法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%80%BC%E6%B3%95%E6%B1%82%E6%9D%83%E9%87%8D%E5%A6%82%E8%A1%A87important"><span class="toc-number">3.5.4.</span> <span class="toc-text">(3)
+特征值法求权重（如表7）——important</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%A6%82%E6%9E%9C%E5%A4%9A%E4%BA%BA%E7%94%A8%E4%BC%9A%E7%9B%B4%E6%8E%A5%E5%88%A4%E5%AE%9A%E4%B8%BA%E6%8A%84%E8%A2%AD"><span class="toc-number">3.6.</span> <span class="toc-text">代码部分（千万不要直接使用，如果多人用会直接判定为抄袭！）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-number">3.6.1.</span> <span class="toc-text">(1) 判断一致性：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%82%E4%B8%80%E8%87%B4%E6%80%A7%E7%9F%A9%E9%98%B5%E7%9A%84%E6%9D%83%E9%87%8D"><span class="toc-number">3.6.2.</span> <span class="toc-text">(2) 求一致性矩阵的权重：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E6%89%93%E5%88%86"><span class="toc-number">3.7.</span> <span class="toc-text">最后打分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E6%80%BB%E6%8E%92%E5%BA%8F%E4%B8%80%E8%87%B4%E6%80%A7%E6%A3%80%E9%AA%8C"><span class="toc-number">3.8.</span> <span class="toc-text">6. 层次总排序一致性检验</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2024 - 2026 By 狗狗爱卷卷</span></div><div class="footer_custom_text">Copyright © 2024 Waky. All Rights Reserved.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
