@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>使用git | 狗狗爱卷卷</title><meta name="author" content="狗狗爱卷卷"><meta name="copyright" content="狗狗爱卷卷"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="笔者遇到了一些较为不可思议之事。有人在做项目之时，每做完一份就会把那个版本的文件传到QQ的群文件中，美名其曰保留记录。笔者OS：？？？ 事实上，这个行为其实就是简化版的git，但是就是有人不会git。这里笔者只好说，懂git的人可以退出，不懂git的客官请继续看。 下载并安装git 下载是到网..."><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "使用git",
+  "url": "https://prj159.github.io/posts/usegit/",
+  "image": "https://prj159.github.io/img/avatar.jpeg",
+  "datePublished": "2026-03-09T13:54:49.000Z",
+  "dateModified": "2026-03-11T13:56:53.180Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "狗狗爱卷卷",
+      "url": "https://prj159.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://prj159.github.io/posts/usegit/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用git',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><style>
+  a.social-icon[title="公众号二维码"] {
+    position: relative;
+  }
+  a.social-icon[title="公众号二维码"]::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 120px;
+    height: 120px;
+    background: url('/img/wechat.jpeg') no-repeat center/contain;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 9999;
+    margin-bottom: 10px;
+  }
+  a.social-icon[title="公众号二维码"]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>
+<meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-color: #F0F0F0;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-link"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">狗狗爱卷卷</span></a><a class="nav-page-title" href="/"><span class="site-name">使用git</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-link"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">使用git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-09T13:54:49.000Z" title="发表于 2026-03-09 21:54:49">2026-03-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-11T13:56:53.180Z" title="更新于 2026-03-11 21:56:53">2026-03-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>笔者遇到了一些较为不可思议之事。有人在做项目之时，每做完一份就会把那个版本的文件传到QQ的群文件中，美名其曰保留记录。笔者OS：？？？</p>
+<p>事实上，这个行为其实就是简化版的git，但是就是有人不会git。这里笔者只好说，懂git的人可以退出，不懂git的客官请继续看。</p>
+<h1 id="下载并安装git">下载并安装git</h1>
+<p>下载是到网站(<a
+href="">https://git-scm.com/install/windows</a>)中下载安装包。里面涵盖了Windows、Mac、Linux三大操作系统的安装程序，点进去看就可以看到安装包下载或者教你如何命令行下载。跟着做就可以成功下载并安装git。</p>
+<p>如果你想看有没有装好，直接将这个代码敲进你的终端中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<p>如果可以弹出版本号就是下载完成，如果没有弹出那可能需要在知乎、CSDN等网站找解决方法了。</p>
+<p>随后需要配置你的git。注意！你的名字一定要用英文！！！你的邮箱最好用你注册GitHub或者Gitee的邮箱账号。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的名字&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h1 id="使用git">使用git</h1>
+<p>如今的大多数人看到命令行就发愁，这里推荐使用GitHub
+desktop的软件，这个是图形化软件，可以一目了然地学会如何操作git。</p>
+<p>首先肯定是要找到GitHub desktop这个软件，安装包在网站(<a
+href="">https://desktop.github.com/download/</a>)中下载即可。</p>
+<p>使用该软件之前需要使用GitHub账号登陆。接下来的操作笔者会用Mac
+OS来展示，Windows用户一样是可以跟着操作的。一般Mac
+OS的菜单栏都是在屏幕的左上角，Windows即是对应软件窗口的左上角。</p>
+<h3 id="个人工作流">个人工作流</h3>
+<p>我们先以个人工作流为例。为了可以获取文件数据，第一步一定是要点击左上角的File，随后会弹出三个选项，分别是：</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2008.41.49.png" alt="File的位置" />
+<figcaption aria-hidden="true">File的位置</figcaption>
+</figure>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2008.45.54.png" alt="点击File" />
+<figcaption aria-hidden="true">点击File</figcaption>
+</figure>
+<blockquote>
+<p>New
+repository（新建仓库，当你的GitHub和本地电脑中都没有该项目的时候点击，这样会在你的GitHub和本地电脑都生成项目）</p>
+<p>add local
+repository（添加本地仓库，当你的GitHub中没有该项目，但是本地电脑有该项目的时候点击，这样会把本地电脑的项目上传到GitHub中）</p>
+<p>clone
+repository（克隆仓库，当本地电脑没有项目，但GitHub中有项目的时候点击，这样会把GitHub的项目下载到你的电脑中）</p>
+</blockquote>
+<p>假设我们在GitHub和本地电脑中都没有项目，我们点击New
+repository。随后会出现该界面</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2009.02.22.png"
+alt="新建 New repository" />
+<figcaption aria-hidden="true">新建 New repository</figcaption>
+</figure>
+<blockquote>
+<p>Name（你的仓库名字）</p>
+<p>Description（对你仓库的描述）</p>
+<p>Local path（把该项目存在你的电脑的哪个地方）</p>
+<p>Initialize this repository with a
+README（默认会生成一个README.md文件，这个文件一般是开发者写给使用者的内容，相当于说明书）</p>
+<p>Git ignore（忽略上传哪类文件）</p>
+<p>License（许可）</p>
+</blockquote>
+<p>后面两个空取默认就行。</p>
+<p>就先随便写一个吧，比如我想要搞一个会打印hello
+world的python代码。我的内容填写如下。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2009.17.35.png" alt="新建仓库" />
+<figcaption aria-hidden="true">新建仓库</figcaption>
+</figure>
+<p>然后就可以用Visual Studio
+Code打开这个文件夹。在该文件夹里面创建main.py并在文件写上print(“hello
+world”)，这样你的GitHub desktop会出现changes。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2009.02.22.png" alt="出现changes" />
+<figcaption aria-hidden="true">出现changes</figcaption>
+</figure>
+<p>之后就可以在窗口左下角写上标题和description，这个标题指的是你当前改动行为的标题，内容也是同理，填写完后我们就可以提交了。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2009.28.18.png" alt="填写提交" />
+<figcaption aria-hidden="true">填写提交</figcaption>
+</figure>
+<p>提交要点击commit ? files to
+main，这样做是将你的修改提交至暂存区，随后还要点击pubilish
+repository，这样我们的项目才可以同步到GitHub。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2009.30.20.png"
+alt="同步到GitHub" />
+<figcaption aria-hidden="true">同步到GitHub</figcaption>
+</figure>
+<p>你可以在GitHub中查看你刚刚建的仓库。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2010.20.27.png" alt="查看仓库" />
+<figcaption aria-hidden="true">查看仓库</figcaption>
+</figure>
+<p>如果你对你的项目有改动，你可以重复上面的动作来进行修改。</p>
+<p>当然，GitHub最好的功能就是可以时刻恢复你代码的版本，比如笔者在刚刚的项目中把”hello
+world”改为”hi
+world”并上传到GitHub，然后又后悔对这个功能进行改动，我们就可以进行版本恢复。点击history，然后在改动的那个commit右键，选择revert
+changes in commit，最后再push一下。这样你在这里的功能改动就恢复了。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2011.00.18.png" alt="版本恢复" />
+<figcaption aria-hidden="true">版本恢复</figcaption>
+</figure>
+<p>值得注意的是，这个恢复并不是对整个文件的恢复，而是对你改的某几行代码的恢复。</p>
+<h3 id="团队工作流">团队工作流</h3>
+<p>接下来是团队合作工作流。团队合作工作流必然会比个人工作流要复杂一些。</p>
+<p>如果你是参与者，你可以让主持人invite你随后就可以clone你们团队的项目到你的电脑上。此时克隆需要在GitHub
+desktop点击File，随后点击clone
+repository，就会出现这个界面。在该界面中选择你想要克隆的仓库，然后更改你想要存放的位置，这样就成功地将团队的项目给存到你的电脑中了。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2010.30.52.png" alt="克隆仓库" />
+<figcaption aria-hidden="true">克隆仓库</figcaption>
+</figure>
+<p>团队工作流经常需要用到的是分支branch和代码冲突。</p>
+<p>分支branch是为了给代码加入新功能，但是害怕加新功能之后会改崩最后挂掉的这种情况做准备。我们还是用之前的hello仓库试试水，要新建一个branch，首先要点击current
+branch，随后点击new
+branch，给这个新的分支命名，笔者将该分支的命名为test，确认后，现在我们就处在test分支里，如果想要回去main分支，就还是点击current
+branch再点击main，这样就回到main分支中。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2011.18.13.png" alt="新建分支" />
+<figcaption aria-hidden="true">新建分支</figcaption>
+</figure>
+<p>我们在test分支里面将main.py改成图中这样，随后上传，这样就完成了分支的新建和上传。在GitHub中也可以看见你新建的分支。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2011.31.59.png" alt="查看分支" />
+<figcaption aria-hidden="true">查看分支</figcaption>
+</figure>
+<p>新功能肯定是要合并到主分支的，在你认为代码测试得差不多时，就可以合并到main分支了。首先将你的current
+branch调到main，随后要点一下current branch，再点击choose a branch to
+merge into
+main，选择你想将哪个分支合并到主分支，笔者这里选择test，最后点击create a
+merge commit。这样就成功地把test分支的内容合并到主分支。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2011.46.11.png" alt="合并分支" />
+<figcaption aria-hidden="true">合并分支</figcaption>
+</figure>
+<p>上图笔者截错了，大家看到操作和图片展示不一样不要慌张</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2011.49.47.png" alt="合并分支" />
+<figcaption aria-hidden="true">合并分支</figcaption>
+</figure>
+<p>代码冲突出现在你和你的同事在同时改同样的一份文件，然后你的同事先提交了他的代码，随后你也想要提交你的代码，因为他改的部分代码和你改的部分代码因为git没有这么高级导致无法合并，这样GitHub
+desktop就会报错，说有冲突，这样就需要人去解决这部分的冲突。</p>
+<p>笔者这里模拟一下这个冲突，笔者还是在hello仓库里在main分支里新建一个test.txt文件，在里面写着“这是基础版本”。随后在main分支分出一个新的分支test2，将test2分支的test.txt文件的“这是基础版本”改为“这是test2的版本”。再去main分支的test.txt文件的“这是基础版本”改为“这是main的版本”。把test2分支合并到main分支，这样GitHub
+desktop就会说有冲突。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2012.18.04.png" alt="冲突" />
+<figcaption aria-hidden="true">冲突</figcaption>
+</figure>
+<p>我们点击open in Visual Studio
+Code，然后就在VSC中看到因为哪些地方发生了冲突，为了方便观察，我们可以选择比较更改，这样界面就会变成两个分支有改动的文本和原本没有改动的文本。此时笔者选择“这是main的版本”的更改，再点击完成合并，这样冲突就可以解除了。最后再回到GitHub
+desktop就可以将你的代码上传到GitHub了。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2012.19.02.png" alt="冲突解决" />
+<figcaption aria-hidden="true">冲突解决</figcaption>
+</figure>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2012.19.46.png" alt="冲突解决" />
+<figcaption aria-hidden="true">冲突解决</figcaption>
+</figure>
+<p>此时笔者选择“这是main的版本”的更改，再点击完成合并，这样冲突就可以解除了。最后再回到GitHub
+desktop就可以将你的代码上传到GitHub了。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2012.20.01.png" alt="冲突解决" />
+<figcaption aria-hidden="true">冲突解决</figcaption>
+</figure>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2012.20.15.png" alt="冲突解决" />
+<figcaption aria-hidden="true">冲突解决</figcaption>
+</figure>
+<p>需要注意的是，在团队合作中要经常地点击Fetch
+origin，以免落掉同事修改的代码。</p>
+<hr />
+<p>最后如果想要在GitHub删除hello这个仓库，可以在GitHub网站找到你的hello这个仓库点进去，随后在上方的菜单栏中找到settings，划到最下面，点击delete
+this
+repository，跟着系统提示操作，就可以把这个仓库在GitHub中删了。本地的直接移到垃圾桶就删了。</p>
+<figure>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/p0001/截屏2026-02-08%2012.30.09.png" alt="删除仓库" />
+<figcaption aria-hidden="true">删除仓库</figcaption>
+</figure>
+<hr />
+<h2 id="end">END</h2>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://prj159.github.io">狗狗爱卷卷</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://prj159.github.io/posts/usegit/">https://prj159.github.io/posts/usegit/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://prj159.github.io" target="_blank">狗狗爱卷卷</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/avatar.jpeg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/" title="数学建模——层次分析法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">数学建模——层次分析法</div></div><div class="info-2"><div class="info-item-1">层次分析法的作用 将主观判断与客观数据结合，对多因素、多目标的复杂问题进行结构化分解。既可以避免决策依赖直觉，提升逻辑性和透明度。  层次分析法的步骤：  提出评价类问题； 在论文中画出层级结构图； 构造判断矩阵； 依照评价指标对各个方案打分； 求出权重，填表，求得最后打分； 层次总排序一致性检验。  下面我们会以这样的步骤解决一个小问题。  【例题】 小明想买一件衣服，但是有太多的品牌选择了，有阿迪达斯、耐克和安踏。为了可以选出自己满意的品牌，小明制定了他的判断标准，有衣服新颖度、衣服价格、衣服评价、商家态度。  1. 提出评价类问题 即上文例题。  2. 在论文中画出层级结构图 层级结构图内有包含目标层、准则层、方案层。我们以这道题为例，目标层就是选择品牌，准则层是衣服新颖度、衣服价格、衣服评价、商家态度，方案层是阿迪达斯、耐克和安踏。结构图如图1所示。   层级结构图   图1   3. 构造判断矩阵 构造判断矩阵使用“两两比较法”，比如把衣服新颖度和衣服价格放来比较看怎么打分。打分标准如下表1。    因素比因素 量化值     同等重要 1   稍微重要 3   较强重...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">狗狗爱卷卷</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/prj159" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:panrj159@qq.com" target="_blank" title=""><i class="fa fa-envelope"></i></a><a class="social-icon" href="javascript:void(0);" target="_blank" title="公众号二维码"><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85git"><span class="toc-number">1.</span> <span class="toc-text">下载并安装git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8git"><span class="toc-number">2.</span> <span class="toc-text">使用git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">2.1.</span> <span class="toc-text">个人工作流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%A2%E9%98%9F%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">2.2.</span> <span class="toc-text">团队工作流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#end"><span class="toc-number">2.3.</span> <span class="toc-text">END</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2024 - 2026 By 狗狗爱卷卷</span></div><div class="footer_custom_text">Copyright © 2024 Waky. All Rights Reserved.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
